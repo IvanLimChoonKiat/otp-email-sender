@@ -147,7 +147,7 @@ const otpSender = new OTPEmailSender({
 ## 🆘 Need Help?
 
 - 📖 Read the full [README.md](README.md)
-- 🔍 Check existing [GitHub issues](https://github.com/yourusername/otp-email-sender/issues)
+- 🔍 Check existing [GitHub issues](https://github.com/IvanLimChoonKiat/otp-email-sender/issues)
 - 💬 Create a new issue if you're stuck
 
 ---

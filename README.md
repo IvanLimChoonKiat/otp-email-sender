@@ -337,13 +337,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Links
 
 - [npm package](https://npmjs.com/package/otp-email-sender)
-- [GitHub repository](https://github.com/yourusername/otp-email-sender)
+- [GitHub repository](https://github.com/IvanLimChoonKiat/otp-email-sender)
 - [NodeMailer documentation](https://nodemailer.com/)
 
 ## 📞 Support
 
 If you have any questions or need help, please:
-- Open an issue on GitHub
+- Open an issue on GitHub: https://github.com/IvanLimChoonKiat/otp-email-sender/issues
 - Check the examples in the `/examples` folder
 - Read the documentation above
 

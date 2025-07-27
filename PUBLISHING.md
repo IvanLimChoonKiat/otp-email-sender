@@ -86,8 +86,8 @@ git add .
 # Commit
 git commit -m "Initial release: OTP Email Sender v1.0.0"
 
-# Add remote origin (replace USERNAME with your GitHub username)
-git remote add origin https://github.com/USERNAME/otp-email-sender.git
+# Add remote origin (replace with your actual repository URL)
+git remote add origin https://github.com/IvanLimChoonKiat/otp-email-sender.git
 
 # Push to GitHub
 git branch -M main

@@ -21,17 +21,17 @@
     "nextjs",
     "express"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "ivanlim608@gmail.com",
   "license": "MIT",
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/otp-email-sender.git"
+    "url": "https://github.com/IvanLimChoonKiat/otp-email-sender.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/otp-email-sender/issues"
+    "url": "https://github.com/IvanLimChoonKiat/otp-email-sender/issues"
   },
-  "homepage": "https://github.com/yourusername/otp-email-sender#readme",
+  "homepage": "https://github.com/IvanLimChoonKiat/otp-email-sender#readme",
   "files": [
     "src/",
     "examples/",
