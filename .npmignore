@@ -1,0 +1,30 @@
+# Development files
+test/
+examples/
+.github/
+.vscode/
+.idea/
+
+# Environment and config files
+.env*
+.gitignore
+.npmignore
+
+# Documentation drafts
+docs/
+*.draft.md
+
+# Development dependencies
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

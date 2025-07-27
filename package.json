@@ -1,0 +1,49 @@
+{
+  "name": "otp-email-sender",
+  "version": "1.0.0",
+  "description": "A secure and easy-to-use 6-digit OTP generator and email sender using NodeMailer. Perfect for authentication flows in Node.js and Next.js applications.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "node test/index.test.js",
+    "example": "node examples/usage.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "otp",
+    "email",
+    "authentication",
+    "nodemailer",
+    "verification",
+    "2fa",
+    "two-factor",
+    "nodejs",
+    "nextjs",
+    "express"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/otp-email-sender.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/otp-email-sender/issues"
+  },
+  "homepage": "https://github.com/yourusername/otp-email-sender#readme",
+  "files": [
+    "src/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
