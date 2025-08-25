@@ -1,5 +1,8 @@
 export interface OTPConfig {
-  service: string;
+  service?: string;
+  host?: string;
+  port?: number;
+  secure?: boolean;
   user: string;
   pass: string;
   from?: string;

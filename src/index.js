@@ -9,6 +9,9 @@ class OTPEmailSender {
    * Initialize the OTP Email Sender
    * @param {Object} config - Configuration object
    * @param {string} config.service - Email service (e.g., 'gmail', 'outlook')
+   * @param {string} [config.host] - SMTP host (e.g., 'smtp.mailtrap.io')
+   * @param {number} [config.port] - SMTP port (e.g., 465 or 587)
+   * @param {boolean} [config.secure] - Whether to use SSL/TLS (true for 465)
    * @param {string} config.user - Email username
    * @param {string} config.pass - Email password or app password
    * @param {string} [config.from] - From email address (defaults to user)
@@ -16,12 +19,15 @@ class OTPEmailSender {
    * @param {number} [config.expiryMinutes] - OTP expiry in minutes (default: 10)
    */
   constructor(config) {
-    if (!config || !config.service || !config.user || !config.pass) {
-      throw new Error('Email configuration is required: service, user, and pass');
+    if ((!config.service && !config.host) || !config.user || !config.pass) {
+      throw new Error('Email configuration is required: provide either service or host, along with user and pass');
     }
 
     this.config = {
       service: config.service,
+      host: config.host,
+      port: config.port,
+      secure: config.secure,
       user: config.user,
       pass: config.pass,
       from: config.from || config.user,
@@ -29,14 +35,26 @@ class OTPEmailSender {
       expiryMinutes: config.expiryMinutes || 10
     };
 
-    // Create transporter
-    this.transporter = nodemailer.createTransport({
-      service: this.config.service,
-      auth: {
-        user: this.config.user,
-        pass: this.config.pass
-      }
-    });
+    // Create transporter based on service or custom SMTP
+    if (this.config.service) {
+      this.transporter = nodemailer.createTransport({
+        service: this.config.service,
+        auth: {
+          user: this.config.user,
+          pass: this.config.pass
+        }
+      });
+    } else {
+      this.transporter = nodemailer.createTransport({
+        host: this.config.host,
+        port: this.config.port || 587,
+        secure: this.config.secure ?? false,
+        auth: {
+          user: this.config.user,
+          pass: this.config.pass
+        }
+      });
+    }
 
     // Store for OTP verification (in production, use Redis or database)
     this.otpStore = new Map();
